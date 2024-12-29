@@ -75,22 +75,22 @@ Sprite:Scale(
 	"ExampleFrame",            -- NameId
 	UDim2.fromOffset(150, 150),-- OldSize
 	UDim2.fromOffset(250, 250),-- NewSize
-	true,					             -- IsSmooth
-	1,						             -- Time
+	true,			   -- IsSmooth
+	1,			   -- Time
 	Enum.EasingDirection.InOut,-- EasingDirection
 	Enum.EasingStyle.Quad,	   -- EasingStyle
-	"MainGui"				           -- Location
+	"MainGui"		   -- Location
 )
 
 Sprite:Rotate(
 	"ExampleFrame",            -- NameId
-	0, 						             -- OldRotation
-	180, 					             -- NewRotation
-	true,					             -- IsSmooth
-	1,						             -- Time
+	0, 			   -- OldRotation
+	180, 			   -- NewRotation
+	true,			   -- IsSmooth
+	1,			   -- Time
 	Enum.EasingDirection.InOut,-- EasingDirection
 	Enum.EasingStyle.Quad,	   -- EasingStyle
-	"MainGui"			        	   -- Location
+	"MainGui"		   -- Location
 )
 
 task.wait(2)
@@ -99,33 +99,33 @@ Sprite:Move(
 	"ExampleFrame",            -- NameId
 	UDim2.fromScale(0.5, 0.75),-- OldPosition
 	UDim2.fromScale(0.5, 0.25),-- NewPosition
-	true,					             -- IsSmooth
-	1,						             -- Time
+	true,			   -- IsSmooth
+	1,		           -- Time
 	Enum.EasingDirection.InOut,-- EasingDirection
 	Enum.EasingStyle.Quad,	   -- EasingStyle
-	"MainGui"				           -- Location
+	"MainGui"		   -- Location
 )
 
 Sprite:Scale(
 	"ExampleFrame",            -- NameId
 	UDim2.fromOffset(250, 250),-- OldSize
 	UDim2.fromOffset(150, 150),-- NewSize
-	true,					             -- IsSmooth
-	1,						             -- Time
+	true,			   -- IsSmooth
+	1,			   -- Time
 	Enum.EasingDirection.InOut,-- EasingDirection
 	Enum.EasingStyle.Quad,	   -- EasingStyle
-	"MainGui"			        	   -- Location
+	"MainGui"		   -- Location
 )
 
 Sprite:Rotate(
 	"ExampleFrame",            -- NameId
-	180, 					             -- OldRotation
-	0, 						             -- NewRotation
-	true,					             -- IsSmooth
-	1,						             -- Time
+	180, 			   -- OldRotation
+	0, 			   -- NewRotation
+	true,			   -- IsSmooth
+	1,			   -- Time
 	Enum.EasingDirection.InOut,-- EasingDirection
 	Enum.EasingStyle.Quad,	   -- EasingStyle
-	"MainGui"				           -- Location
+	"MainGui"		   -- Location
 )
 ```
 
