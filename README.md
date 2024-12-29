@@ -21,7 +21,7 @@ Creates a new frame within the UI.
 
 **Example**:
 ```lua
-local frame = Sprite:CreateFrame("ExampleFrame", Color3.fromRGB(255, 0, 0), 0, UDim2.new(0, 100, 0, 100), UDim2.new(0, 200, 0, 200), 1, "MainGui")
+Sprite:CreateFrame("ExampleFrame", Color3.fromRGB(255, 0, 0), 0, UDim2.new(0, 100, 0, 100), UDim2.new(0, 200, 0, 200), 1, "MainGui")
 ```
 
 ### `Sprite:CreateImage`
@@ -42,5 +42,5 @@ Creates an image label in the UI.
 
 **Example**:
 ```lua
-local image = Sprite:CreateImage("ExampleImage", "10006333293", Color3.fromRGB(255, 255, 255), UDim2.new(0, 50, 0, 50), UDim2.new(0, 100, 0, 100), 1, "MainGui", Vector2.new(0.5, 0.5), 0)
+Sprite:CreateImage("ExampleImage", "10006333293", Color3.fromRGB(255, 255, 255), UDim2.new(0, 50, 0, 50), UDim2.new(0, 100, 0, 100), 1, "MainGui", Vector2.new(0.5, 0.5), 0)
 ```
