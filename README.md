@@ -44,7 +44,7 @@ Sprite:CreateFrame(
 )
 ```
 
-Or to make animations:
+You can also make animations too:
 
 ```lua
 local Sprite = require(game.StarterGui["Roblox-UI-Toolkit"].SpriteManager)
