@@ -220,10 +220,154 @@ The `CreateText` function creates a dynamic `TextLabel` element that can be cust
 
 This function is ideal for adding rich, animated text effects to Roblox games, with complete control over text appearance and timing.
 
+### `Sprite:Delete`
+The `Delete` function allows you to remove a sprite (frame, image, or text) from the UI by specifying its `NameId`. If the sprite doesn't exist, it will throw an error.
+
+#### Parameters:
+- `NameId` (string): The name of the sprite (frame, image, or text) to delete.
+- `Location` (Frame): The parent frame (or UI element) where the sprite is located. It helps locate the sprite within the UI hierarchy.
+
+**Returns**: None. The function will either delete the sprite or throw an error if the sprite is not found.
+
+#### Example:
+```lua
+Sprite:Delete("ExampleFrame", game.StarterGui.MainGui)
+```
+
+#### Explanation:
+- The `Delete` function searches for the sprite by `NameId` within the `Location` frame (or UI element). If the sprite is found, it calls the `Destroy` method to remove it from the UI.
+- If the sprite does not exist, the function throws an error message, stating that the sprite with the specified `NameId` was not found.
+- This function is useful for dynamically removing UI elements, such as when closing a menu, transitioning between screens, or clearing up resources.
+
+---
+
+### `Sprite:Move`
+The `Move` function allows you to smoothly or instantly move a UI element (like a frame, image, or text) from one position to another within the UI.
+
+#### Parameters:
+- `NameId` (string): The name of the sprite (frame, image, or text) to move.
+- `OldPosition` (UDim2): The initial position of the sprite.
+- `NewPosition` (UDim2): The final position where the sprite should move to.
+- `IsSmooth` (boolean): If `true`, the sprite will smoothly transition to the new position. If `false`, it will jump to the new position instantly.
+- `Time` (number): The duration of the transition (in seconds).
+- `EasingDirection` (Enum.EasingDirection): The direction of the easing function (e.g., `In`, `Out`, `InOut`).
+- `EasingStyle` (Enum.EasingStyle): The style of the easing function (e.g., `Quad`, `Quart`, `Sine`).
+- `Location` (string): The name of the parent object (UI element) where the sprite is located.
+
+**Returns**: None. The sprite will either move instantly or transition smoothly to the new position.
+
+#### Example:
+```lua
+Sprite:Move("ExampleFrame", UDim2.new(0.1, 0, 0.1, 0), UDim2.new(0.5, 0, 0.5, 0), true, 1, Enum.EasingDirection.InOut, Enum.EasingStyle.Quad, "MainGui")
+```
+
+---
+
+### `Sprite:Rotate`
+The `Rotate` function allows you to smoothly or instantly rotate a UI element (like a frame, image, or text) from one rotation angle to another.
+
+#### Parameters:
+- `NameId` (string): The name of the sprite (frame, image, or text) to rotate.
+- `OldRotation` (number): The initial rotation angle of the sprite.
+- `NewRotation` (number): The final rotation angle where the sprite should rotate to.
+- `IsSmooth` (boolean): If `true`, the sprite will smoothly rotate. If `false`, it will jump to the new rotation instantly.
+- `Time` (number): The duration of the rotation (in seconds).
+- `EasingDirection` (Enum.EasingDirection): The direction of the easing function (e.g., `In`, `Out`, `InOut`).
+- `EasingStyle` (Enum.EasingStyle): The style of the easing function (e.g., `Quad`, `Quart`, `Sine`).
+- `Location` (string): The name of the parent object (UI element) where the sprite is located.
+
+**Returns**: None. The sprite will either rotate instantly or transition smoothly to the new rotation.
+
+#### Example:
+```lua
+Sprite:Rotate("ExampleFrame", 0, 180, true, 2, Enum.EasingDirection.InOut, Enum.EasingStyle.Quart, "MainGui")
+```
+
+---
+
+### `Sprite:Scale`
+The `Scale` function allows you to smoothly or instantly change the size of a UI element (like a frame, image, or text).
+
+#### Parameters:
+- `NameId` (string): The name of the sprite (frame, image, or text) to scale.
+- `OldScale` (UDim2): The initial size of the sprite.
+- `NewScale` (UDim2): The final size where the sprite should scale to.
+- `IsSmooth` (boolean): If `true`, the sprite will smoothly scale. If `false`, it will change size instantly.
+- `Time` (number): The duration of the scaling (in seconds).
+- `EasingDirection` (Enum.EasingDirection): The direction of the easing function (e.g., `In`, `Out`, `InOut`).
+- `EasingStyle` (Enum.EasingStyle): The style of the easing function (e.g., `Quad`, `Quart`, `Sine`).
+- `Location` (string): The name of the parent object (UI element) where the sprite is located.
+
+**Returns**: None. The sprite will either scale instantly or transition smoothly to the new size.
+
+#### Example:
+```lua
+Sprite:Scale("ExampleFrame", UDim2.fromOffset(100, 100), UDim2.fromOffset(200, 200), true, 1, Enum.EasingDirection.InOut, Enum.EasingStyle.Quart, "MainGui")
+```
+
+---
+
+### `Sprite:Color`
+The `Color` function allows you to smoothly or instantly change the color of a UI element (like a frame, image, or text).
+
+#### Parameters:
+- `NameId` (string): The name of the sprite (frame, image, or text) to change color.
+- `NewColor` (Color3): The final color the sprite should change to.
+- `IsSmooth` (boolean): If `true`, the sprite will smoothly change color. If `false`, it will change color instantly.
+- `Time` (number): The duration of the color transition (in seconds).
+- `EasingDirection` (Enum.EasingDirection): The direction of the easing function (e.g., `In`, `Out`, `InOut`).
+- `EasingStyle` (Enum.EasingStyle): The style of the easing function (e.g., `Quad`, `Quart`, `Sine`).
+- `Location` (string): The name of the parent object (UI element) where the sprite is located.
+
+**Returns**: None. The sprite will either change color instantly or transition smoothly to the new color.
+
+#### Example:
+```lua
+Sprite:Color("ExampleFrame", Color3.fromRGB(255, 0, 0), true, 1, Enum.EasingDirection.InOut, Enum.EasingStyle.Quart, "MainGui")
+```
+
+---
+
+### `Sprite:Transparency`
+The `Transparency` function allows you to smoothly or instantly change the transparency of a UI element (like a frame, image, or text).
+
+#### Parameters:
+- `NameId` (string): The name of the sprite (frame, image, or text) to change transparency.
+- `NewTransparency` (number): The final transparency value (from 0 to 1).
+- `IsSmooth` (boolean): If `true`, the sprite will smoothly change transparency. If `false`, it will change transparency instantly.
+- `Time` (number): The duration of the transparency transition (in seconds).
+- `EasingDirection` (Enum.EasingDirection): The direction of the easing function (e.g., `In`, `Out`, `InOut`).
+- `EasingStyle` (Enum.EasingStyle): The style of the easing function (e.g., `Quad`, `Quart`, `Sine`).
+- `Location` (string): The name of the parent object (UI element) where the sprite is located.
+
+**Returns**: None. The sprite will either change transparency instantly or transition smoothly to the new transparency.
+
+#### Example:
+```lua
+Sprite:Transparency("ExampleFrame", 0.5, true, 1, Enum.EasingDirection.InOut, Enum.EasingStyle.Quart, "MainGui")
+```
+
+---
+
 ### FAQ
 
-Q: Why isn’t the frame showing up in my GUI?
+**Q: Why isn’t the frame showing up in my GUI?**
 A: Make sure you have at least one `ScreenGui` | Make sure the `Location` value is not empty.
 
-Q: How do I change the color of a frame?
-A: You can use the Color3.fromRGB(r, g, b) method to change the color of your frame, where r, g, and b are values between 0 and 255.
+**Q: How do I change the color of a frame?**
+A: You can use the `Color3.fromRGB(r, g, b)` method to change the color of your frame, where `r`, `g`, and `b` are values between `0` and `255`.
+
+**Q: What happens if I try to delete a sprite that doesn't exist?**  
+A: If you attempt to delete a sprite that doesn't exist, the function will throw an error with the message `ERROR: Sprite 'NameId' doesn't exist`.
+
+**Q: Can I delete sprites that are not frames?**  
+A: Yes, you can delete any type of sprite (frame, image, or text) as long as you provide the correct `NameId` and `Location` where the sprite exists.
+
+**Q: Can I use these functions on all UI elements?**  
+A: Yes, these functions can be applied to frames, images, and text labels.
+
+**Q: How do I know if the transition is smooth or instant?**  
+A: If `IsSmooth` is set to `true`, the transition will be smooth. If `false`, the change will be immediate.
+
+**Q: Can I control the speed of the transition?**  
+A: Yes, the `Time` parameter controls the duration of the transition. Increasing `Time` will make the transition slower, while decreasing it will make the transition faster.
