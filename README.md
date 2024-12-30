@@ -40,13 +40,13 @@ Once you've imported the module, you can use the functions it provides. For exam
 local Sprite = require(game.StarterGui["Roblox-UI-Toolkit"].SpriteManager)
 
 Sprite:CreateFrame(
-    "ExampleFrame",           -- NameId
-    Color3.fromRGB(255, 0, 0), -- Color
-    0,                         -- BackgroundTransparency
-    UDim2.new(0, 100, 0, 100), -- Position
-    UDim2.new(0, 200, 0, 200), -- Size
-    1,                         -- ZIndex
-    "Sprites"                  -- Parent
+    	"ExampleFrame",            -- NameId
+    	Color3.fromRGB(255, 0, 0), -- Color
+	0,                         -- BackgroundTransparency
+	UDim2.new(0, 100, 0, 100), -- Position
+    	UDim2.new(0, 200, 0, 200), -- Size
+    	1,                         -- ZIndex
+    	"MainGui"                  -- Parent
 )
 ```
 
