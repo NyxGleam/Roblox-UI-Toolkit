@@ -3,11 +3,13 @@
 ## Overview
 This module provides functions to create and manage visual elements like frames, images, and texts within the user interface in Roblox Studio.
 
-## Functions
+---
 
 # Setup
 
 To use the **Sprite** module in your Roblox project, follow these steps:
+
+---
 
 ### 1. File Structure
 
@@ -16,6 +18,8 @@ Make sure your file structure in Roblox Studio is as follows:
 - **`StarterGui`**: The folder that should contain the module.
 - **`Roblox-UI-Toolkit`**: The folder where your `SpriteManager.lua` (the `ModuleScript`) is located.
 - **`SpriteManager.lua`**: The file containing the logic for the `Sprite` module.
+
+---
 
 ### 2. Import the Module in Your Script
 
@@ -26,6 +30,8 @@ local Sprite = require(game.StarterGui["Roblox-UI-Toolkit"].SpriteManager)
 ```
 
 This code will allow you to access the functions of the `Sprite module` from any other script in your game.
+
+---
 
 ### 3. Basic Usage
 Once you've imported the module, you can use the functions it provides. For example, to create a frame:
@@ -129,6 +135,10 @@ Sprite:Rotate(
 )
 ```
 
+---
+
+## Functions
+
 ### `Sprite:CreateFrame`
 The `CreateFrame` function allows you to create a `Frame` element within the UI, customizable with various properties like color, position, size, and Z-index.
 
@@ -177,6 +187,8 @@ Sprite:CreateImage("ExampleImage", "10006333293", Color3.fromRGB(255, 255, 255),
 #### Explanation:
 The `CreateImage` function creates an `ImageLabel` element within the UI, with properties to control its image, position, size, transparency, and layering. You can use this function to display images or icons in your UI, as well as customize their appearance to fit your game's design.
 
+---
+
 ### `Sprite:CreateText`
 The `CreateText` function allows you to create a `TextLabel` element with customizable text properties such as color, font style, size, position, shadow, and more.
 
@@ -219,6 +231,8 @@ The `CreateText` function creates a dynamic `TextLabel` element that can be cust
 - **Typing Effect**: The `WriteSpeed` parameter controls how quickly the text is revealed. A `WriteSpeed` of 0 will display all text instantly, while a higher value (in seconds) will simulate a typing effect.
 
 This function is ideal for adding rich, animated text effects to Roblox games, with complete control over text appearance and timing.
+
+---
 
 ### `Sprite:Delete`
 The `Delete` function allows you to remove a sprite (frame, image, or text) from the UI by specifying its `NameId`. If the sprite doesn't exist, it will throw an error.
